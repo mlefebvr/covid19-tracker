@@ -11,21 +11,21 @@ import moment from 'moment'
 import '../Styles/App.css';
 
 const Header = () => (
-  <Container fluid>
-    <Row className="row-header bg-primary text-white">
+  <Container fluid className="header">
+    <Row className="row-header">
       <Col className="col-header d-flex justify-content-center">
-        <h1>
+        <div className="fs-3 fw-bold">
           <FontAwesomeIcon icon={faViruses} />
-          <strong>Covid-19 Tracker</strong>
-        </h1>
+          Covid-19 Tracker
+        </div>
       </Col>
     </Row>
-    <Row className="row-header bg-primary text-white">
+    <Row className="row-header">
       <Col className="col-header d-flex justify-content-center">
         <div>
           API by:
           {' '}
-          <a className="text-light" href="https://www.covid19api.com">covid19api.com</a>
+          <a href="https://www.covid19api.com">covid19api.com</a>
         </div>
       </Col>
     </Row>

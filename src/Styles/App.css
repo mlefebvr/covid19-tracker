@@ -37,10 +37,19 @@
   }
 }
 
+.header {
+  color: #fff;
+  background-color: #0000ffdc;
+}
+
+.header a {
+  color: #bebeff;
+}
+
 .bg-lightred {
-  background-color: #ff000033;
+  background-color: #ff000079;
 }
 
 .bg-lightblue {
-  background-color: #0000ff66;
+  background-color: #0000ff73;
 }
