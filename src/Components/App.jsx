@@ -1,9 +1,5 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import Form from 'react-bootstrap/Form'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faViruses } from '@fortawesome/free-solid-svg-icons'
 import moment from 'moment'
@@ -11,25 +7,25 @@ import moment from 'moment'
 import '../Styles/App.css';
 
 const Header = () => (
-  <Container fluid className="header">
-    <Row className="row-header">
-      <Col className="col-header d-flex justify-content-center">
+  <div className="container-fluid header">
+    <div className="row row-header">
+      <div className="col col-header d-flex justify-content-center">
         <div className="fs-3 fw-bold">
           <FontAwesomeIcon icon={faViruses} />
           Covid-19 Tracker
         </div>
-      </Col>
-    </Row>
-    <Row className="row-header">
-      <Col className="col-header d-flex justify-content-center">
+      </div>
+    </div>
+    <div className="row row-header">
+      <div className="col col-header d-flex justify-content-center">
         <div>
           API by:
           {' '}
           <a href="https://www.covid19api.com">covid19api.com</a>
         </div>
-      </Col>
-    </Row>
-  </Container>
+      </div>
+    </div>
+  </div>
 )
 
 const Body = () => {
@@ -81,21 +77,21 @@ const Body = () => {
 
   return (
     data.Countries ? (
-      <Container>
-        <Row>
-          <Col className="d-flex justify-content-center">
+      <div className="container">
+        <div className="row">
+          <div className="col d-flex justify-content-center">
             <h3>{selectedCountryData.Country}</h3>
-          </Col>
-        </Row>
-        <Row>
-          <Col className="d-flex justify-content-center">
+          </div>
+        </div>
+        <div className="row">
+          <div className="col d-flex justify-content-center">
             <div>
               {moment(selectedCountryData.Date).format('dddd, MMMM Do YYYY, h:mm:ss a')}
             </div>
-          </Col>
-        </Row>
-        <Row>
-          <Col className="d-flex justify-content-center">
+          </div>
+        </div>
+        <div className="row">
+          <div className="col d-flex justify-content-center">
             <div className="w-100 mb-2 text-center p-5 border rounded-3 bg-lightblue">
               <strong>Cases</strong>
               <div>
@@ -105,8 +101,8 @@ const Body = () => {
                 {`Total: ${selectedCountryData.TotalConfirmed}`}
               </div>
             </div>
-          </Col>
-          <Col className="d-flex justify-content-center">
+          </div>
+          <div className="col d-flex justify-content-center">
             <div className="w-100 mb-2 text-center p-5 border rounded-3 bg-lightred">
               <strong>Deaths</strong>
               <div>
@@ -116,21 +112,21 @@ const Body = () => {
                 {`Total: ${selectedCountryData.TotalDeaths}`}
               </div>
             </div>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <Form>
-              <Form.Control as="select" value={selectedCountry} onChange={handleSelectCountry}>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col">
+            <form>
+              <select name="" id="" className="w-100" value={selectedCountry} onChange={handleSelectCountry}>
                 <option value="Global">Global</option>
                 {data.Countries.map((country) => (
                   <option key={country.Slug} value={country.Slug}>{country.Country}</option>
                 ))}
-              </Form.Control>
-            </Form>
-          </Col>
-        </Row>
-      </Container>
+              </select>
+            </form>
+          </div>
+        </div>
+      </div>
     ) : 'Loading data, please wait...'
   )
 }
