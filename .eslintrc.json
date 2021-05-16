@@ -16,10 +16,14 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "immutable"
     ],
     "rules": {
         "semi": "off",
-        "react/react-in-jsx-scope": "off"
+        "react/react-in-jsx-scope": "off",
+        "immutable/no-let": "error",
+        "immutable/no-this": "error",
+        "immutable/no-mutation": "error"
     }
 }
