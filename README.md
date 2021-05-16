@@ -1,7 +1,7 @@
 # React Covid-19 Tracker
 
 A simple Covid-19 tracker written with React.
-Uses Axios to fetch the data from covid19api.com and Bootstrap/React-Bootstrap for CSS
+Uses Axios to fetch the data from covid19api.com and Bootstrap for CSS
 
 This is a learning project.
 
