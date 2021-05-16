@@ -14,8 +14,7 @@ const Header = () => (
     <div className="row row-header">
       <div className="col col-header d-flex justify-content-center">
         <div>
-          API by:
-          {' '}
+          <span>API by: </span>
           <a href="https://www.covid19api.com">covid19api.com</a>
         </div>
       </div>

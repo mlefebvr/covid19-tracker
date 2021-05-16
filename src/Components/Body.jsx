@@ -66,13 +66,28 @@ const Body = () => {
         </div>
         <div className="row">
           <div className="col d-flex justify-content-center">
-            <div className="w-100 mb-2 text-center p-5 border rounded-3 bg-info bg-gradient">
+            <div className="w-100 mb-2 text-center p-5 border rounded-3 bg-warning bg-gradient">
               <strong>Cases</strong>
               <div>
-                {`New: ${selectedCountryData.NewConfirmed}`}
+                <span>New: </span>
+                {selectedCountryData.NewConfirmed}
               </div>
               <div>
-                {`Total: ${selectedCountryData.TotalConfirmed}`}
+                <span>Total: </span>
+                {selectedCountryData.TotalConfirmed}
+              </div>
+            </div>
+          </div>
+          <div className="col d-flex justify-content-center">
+            <div className="w-100 mb-2 text-center p-5 border rounded-3 bg-success bg-gradient">
+              <strong>Recovered</strong>
+              <div>
+                <span>New: </span>
+                {selectedCountryData.NewRecovered}
+              </div>
+              <div>
+                <span>Total: </span>
+                {selectedCountryData.TotalRecovered}
               </div>
             </div>
           </div>
@@ -80,10 +95,12 @@ const Body = () => {
             <div className="w-100 mb-2 text-center p-5 border rounded-3 bg-danger bg-gradient">
               <strong>Deaths</strong>
               <div>
-                {`New: ${selectedCountryData.NewDeaths}`}
+                <span>New: </span>
+                {selectedCountryData.NewDeaths}
               </div>
               <div>
-                {`Total: ${selectedCountryData.TotalDeaths}`}
+                <span>Total: </span>
+                {selectedCountryData.TotalDeaths}
               </div>
             </div>
           </div>
