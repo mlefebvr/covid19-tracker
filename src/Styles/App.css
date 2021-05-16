@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.bg-lightred {
+  background-color: #ff000033;
+}
+
+.bg-lightblue {
+  background-color: #0000ff66;
+}
